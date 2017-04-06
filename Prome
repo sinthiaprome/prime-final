@@ -1,0 +1,197 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+main(){
+float PI = 3.1416;
+int picking;
+char pi_2_ck;
+char circle;
+float circle_radius;
+float triangle_height, triangle_base, triangle_side;
+float square_side;
+float rectangle_height, rectangle_width;
+float trapezium_1st_base, trapezium_2nd_base, right_side, left_side, trapezium_height ;
+float parallelogram_base, parallelogram_height, parallelogram_side;
+float rhombus_side, rhombus_1_diagonal, rhombus_2_diagonal;
+float sphere_radius;
+float cube_edge;
+float cuboid_length, cuboid_width, cuboid_height;
+float cylinder_radius, cylinder_height;
+float  pyramid_base_length, pyramid_base_width, pyramid_height;
+cout << "##########################################" << endl;
+cout << endl;
+cout << "     Welcome to the Geometry App!  #   " << endl;
+cout << endl;
+cout << "##########################################" << endl;
+cout << endl;
+cout << " I will let you calculate the area and perimeter "  << endl;
+cout << " of 2 -D shapes   and volume of 3-D shapes " << endl;
+cout << endl;
+cout << "********************************* " << endl;
+
+cout << "Please enter a choice from below " << endl;
+cout << "What Are The Dimensions of your Shape ?" << endl;
+cout << "1.2-D"<<endl;
+cout << "2.3-D"<< endl;
+cout << "3.Exit"<<endl;
+cout << "Please enter choice : " ;
+cin >> picking;
+if (picking == 1 ){
+    cout << "You  picked 1" << endl;
+    cout << "What shape would you pick ?"<< endl;
+    cout << "a)Circle "<<endl;
+    cout << "b)Square "<<endl;
+    cout << "c)Rectangle "<<endl;
+    cout << "d)Trapezium "<<endl;
+    cout << "e)Parallelogram "<<endl;
+    cout << "f)Rhombus "<<endl;
+    cout << "g)Triangle "<<endl;
+    cout << "Plz pick a shape : ";
+    cin >> circle ;
+    cout << "**************************************" << endl;
+    if (circle=='a'){
+       cout << "you picked 1)a) Circle "<<endl;
+       cout << "Plz enter the radius of your circle : ";
+        cin >>circle_radius;
+        cout << "Perimeter : " << 2 * PI * circle_radius <<endl;
+        cout << "Area : " << (4/3)* PI *(circle_radius)*(circle_radius)*(circle_radius)<< "m^3" <<endl;
+    }
+    else if (circle=='g'){
+       cout << "you picked 1)g)triangle  "<<endl;
+        cout << "Plz enter the height of your triangle (in m): " ;
+        cin >> triangle_height;
+        cout << "Plz enter the base of your triangle (in m ) : " ;
+        cin >> triangle_base;
+        cout << "Plz enter the 3rd side of your triangle(in m) : ";
+        cin >> triangle_side;
+
+        cout << "Perimeter = " <<  triangle_height + triangle_base + triangle_side <<endl;
+        cout << "Area = " << (1/2) * triangle_height * triangle_base << endl;
+
+    }
+        else if (circle=='b'){
+        cout << "Plz enter a side of your square (in m): " ;
+        cin >> square_side;
+        cout << "Perimeter : " << 4 * square_side << endl;
+        cout << "Area : " << square_side * square_side << endl;
+
+    }
+      else if (circle=='c'){
+       cout << "Plz enter the length of your rectangle (in m): " ;
+        cin >> rectangle_height;
+        cout << "Plz enter the width of your rectangle (in m ) : " ;
+        cin >> rectangle_width;
+        cout << "Perimeter = " << 2*(rectangle_height * rectangle_width) << endl;
+        cout << "Area = " << rectangle_height * rectangle_width << endl;
+    }
+      else if (circle=='d'){
+       cout << "Plz enter the 1st base of your Trapezium (in m): " ;
+        cin >> trapezium_1st_base;
+        cout << "Plz enter the 2nd base of your Trapezium (in m): " ;
+        cin >> trapezium_2nd_base;
+        cout << "Plz enter the right side of your Trapezium (in m): " ;
+        cin >> right_side;
+        cout << "Plz enter the left side of your Trapezium (in m): " ;
+        cin >> left_side;
+         cout << "Plz enter the height of your Trapezium (in m): " ;
+        cin >>trapezium_height ;
+        cout << "Perimeter = " << trapezium_1st_base + trapezium_2nd_base + right_side + left_side << endl;
+        cout << "Area = " <<  (trapezium_1st_base + trapezium_2nd_base)/2 * trapezium_height  << endl;
+    }
+    else if (circle=='e'){
+        cout << "Plz enter the base of your Parallelogram (in m): " ;
+        cin >> parallelogram_base;
+               cout << "Plz enter the height of your Parallelogram (in m): " ;
+        cin >>parallelogram_height ;
+        cout << "Plz enter the one side of your Parallelogram (in m): " ;
+        cin >>parallelogram_side ;
+        cout << "Perimeter = " <<2*(parallelogram_side * parallelogram_base )  << endl;
+        cout << "Area = " << parallelogram_base * parallelogram_height  << endl;
+    }
+    else if (circle=='f'){
+        cout << "Plz enter the one side of your Rhombus (in m): " ;
+        cin >>rhombus_side ;
+        cout << "Plz enter the 1st diagonal of your Rhombus (in m): " ;
+        cin >>rhombus_1_diagonal ;
+        cout << "Plz enter the 2nd diagonal of your Rhombus (in m): " ;
+        cin >>rhombus_2_diagonal ;
+        cout << "Perimeter = " << 4*rhombus_side<< endl;
+        cout << "Area = " <<(rhombus_1_diagonal + rhombus_2_diagonal)/2<< endl;
+    }
+
+}
+ if(picking==2){
+      cout << "You  picked 2" << endl;
+    cout << "What shape would you pick ?"<< endl;
+    cout << "a)Sphere "<<endl;
+    cout << "b)Cube "<<endl;
+    cout << "c)Cuboid"<<endl;
+    cout << "d)Cylinder"<<endl;
+    cout << "e)Pyramid "<<endl;
+    cout << "Plz pick a shape :";
+    cin >> pi_2_ck;
+    if (pi_2_ck == 'a') {
+        cout << "You Picked : 2) a)Sphere"<<endl;
+        cout << "Plz enter the radius (in m) : ";
+        cin >> sphere_radius ;
+        cout << "Volume : " << (4/3) * PI * sphere_radius * sphere_radius * sphere_radius <<"m^3"<< endl;
+
+        }
+     else if (pi_2_ck == 'b') {
+        cout << "You Picked : 2) a)Cube"<<endl;
+        cout << "Plz enter the edge of cube ";
+        cin >> cube_edge ;
+        cout << "Volume : " << cube_edge * cube_edge * cube_edge << "m^3"<< endl;
+
+        }
+         else if (pi_2_ck == 'c') {
+        cout << "You Picked : 2) a)Cuboid"<<endl;
+        cout << "Plz enter the length : ";
+        cin >> cuboid_length ;
+        cout << "Plz enter the width : ";
+        cin >> cuboid_width ;
+        cout << "Plz enter the height : ";
+        cin >> cuboid_height ;
+        cout << "Volume : " << cuboid_length * cuboid_width * cuboid_height << "m^3"<< endl;
+
+        }
+         else if (pi_2_ck == 'd') {
+        cout << "You Picked : 2) a)Cylinder"<<endl;
+        cout << "Plz enter the radius : ";
+        cin >> cylinder_radius ;
+        cout << "Plz enter the height : ";
+        cin >> cylinder_height ;
+        cout << "Volume : " << PI * (cylinder_radius*cylinder_radius) * cylinder_height << "m^3"<< endl;
+
+        }
+            }
+         else if (pi_2_ck == 'e') {
+        cout << "You Picked : 2) a)Pyramid"<<endl;
+        cout << "Plz enter the Base length of pyramid : ";
+        cin >> pyramid_base_length ;
+       cout << "Plz enter the Base width of pyramid : ";
+        cin >> pyramid_base_width ;
+         cout << "Plz enter the height of pyramid : ";
+        cin >> pyramid_height ;
+        cout << "Volume : " << (pyramid_base_length * pyramid_base_width * pyramid_height)/3 << "m^3"<< endl;
+
+        }
+
+
+else if (picking==3)
+ {
+cout << "Your picked : 3 Exit" << endl;
+cout << endl;
+cout << " ################################################################# " << endl;
+cout << "#"<<endl;
+cout << "#                                    #"<<endl;
+cout << "#            See you Again !           #  "<<endl;
+cout << "#             Goodbye!                #"<<endl;
+cout << "#"<<endl;
+cout << "#                                      #"<<endl;
+cout << " ################################################################# " << endl;
+}
+
+return 0;
+}
+
